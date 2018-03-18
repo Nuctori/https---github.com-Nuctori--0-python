@@ -1,0 +1,21 @@
+choco 有类似linux里面 apt-get的操作逻辑！
+使用powershell加上chocolatey 可以快速搭建python的开发环境
+1：power shell
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco upgrade chocolatey
+choco install python3
+[Environment]::SetEnvironmentVariable(“Path”,”$env:Path;C:\Python36″, “User”)
+choco install pip
+至此 安装完py3和pip 
+
+pip install virtualenv
+cd ~
+virtualenv wiki
+cd .\wiki\Scripts\
+set-executionpolicy remotesigned
+.\activate
+
+至此 安装完virtualenv
+
+之后就是安装pycharm git 了
+
